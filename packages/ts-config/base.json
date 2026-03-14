@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "target": "ESNext",
+    "module": "EsNext",
+    "moduleDetection": "force",
+    "moduleResolution": "Bundler",
+
+    "noEmit": true,
+    "esModuleInterop": true,
+    "incremental": false,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true,
+    "noUncheckedIndexedAccess": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  }
+}
