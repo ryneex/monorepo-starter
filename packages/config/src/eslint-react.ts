@@ -18,4 +18,12 @@ export const reactConfig = defineConfig([
       "react/prop-types": "off",
     },
   },
+  {
+    rules: {
+      // react-hooks rules
+      "react-hooks/immutability": "off",
+      "react-hooks/set-state-in-effect": "off",
+      "react-hooks/incompatible-library": "off",
+    },
+  },
 ])

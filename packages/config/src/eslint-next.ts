@@ -8,6 +8,16 @@ export const nextConfig = defineConfig([
   ...nextTs,
   ...baseConfig,
   { settings: { react: { version: "19" } } },
+  {
+    rules: {
+      // react-hooks rules
+      "react-hooks/immutability": "off",
+      "react-hooks/set-state-in-effect": "off",
+      "react-hooks/incompatible-library": "off",
+      // next.js rules
+      "@next/next/no-img-element": "off",
+    },
+  },
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
