@@ -1,8 +1,8 @@
 {
   "name": "@repo/ui",
   "version": "0.0.0",
-  "type": "module",
   "private": true,
+  "type": "module",
   "exports": {
     "./components/*": "./src/components/*.tsx",
     "./lib/*": "./src/lib/*.ts",
@@ -11,9 +11,9 @@
     "./styles/globals.css": "./src/styles/globals.css"
   },
   "scripts": {
-    "lint": "pnpm check-types && eslint",
     "check-types": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "oxfmt",
+    "lint": "oxlint --type-aware --type-check"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",

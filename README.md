@@ -4,7 +4,7 @@ Personal **pnpm + Turborepo** layout I reuse when spinning up new projects. Not 
 
 ## Requirements
 
-- **Node** ≥ 22  
+- **Node** ≥ 22
 - **pnpm** 10.32.1 (`packageManager` in root `package.json`)
 
 ## Setup
@@ -15,26 +15,26 @@ pnpm install
 
 ## What’s in here
 
-| Area | Description |
-| ---- | ----------- |
-| `apps/web` | Next.js app |
-| `packages/ui` | Shared React components |
-| `@repo/config` | ESLint + Prettier presets ([details](packages/config/README.md)) |
-| `@repo/ts-config` | Shared `tsconfig` bases |
+| Area              | Description                                                   |
+| ----------------- | ------------------------------------------------------------- |
+| `apps/web`        | Next.js app                                                   |
+| `packages/ui`     | Shared React components                                       |
+| `@repo/config`    | Oxlint + Oxfmt presets ([details](packages/config/README.md)) |
+| `@repo/ts-config` | Shared `tsconfig` bases                                       |
 
-TypeScript everywhere; lint/format via shared config.
+TypeScript everywhere; lint/format via shared Oxlint/Oxfmt presets (root configs + nested package configs).
 
 ## Commands
 
 From the repo root:
 
-| Command | What it does |
-| ------- | ------------ |
-| `pnpm dev` | Dev all apps/packages (Turbo) |
-| `pnpm build` | Build all |
-| `pnpm lint` | Lint all |
-| `pnpm format` | Prettier write all |
-| `pnpm check-types` | `tsc` all |
+| Command            | What it does                                   |
+| ------------------ | ---------------------------------------------- |
+| `pnpm dev`         | Dev all apps/packages (Turbo)                  |
+| `pnpm build`       | Build all                                      |
+| `pnpm lint`        | Lint all (Oxlint, type-aware from root config) |
+| `pnpm format`      | Format all (Oxfmt)                             |
+| `pnpm check-types` | `tsc` all (Turbo)                              |
 
 Target one package:
 
@@ -45,9 +45,9 @@ pnpm exec turbo build --filter=web
 
 ## New project from this starter
 
-1. Copy or clone the repo.  
-2. Rename root `package.json` / workspace packages if you want.  
-3. Add apps under `apps/*`, shared code under `packages/*`.  
+1. Copy or clone the repo.
+2. Rename root `package.json` / workspace packages if you want.
+3. Add apps under `apps/*`, shared code under `packages/*`.
 4. Wire them in `pnpm-workspace.yaml` (already `apps/*`, `packages/*`).
 
 ## Remote cache (optional)
@@ -61,5 +61,5 @@ pnpm exec turbo link
 
 ## Links
 
-- [Turborepo – tasks & filters](https://turborepo.dev/docs/crafting-your-repository/running-tasks)  
+- [Turborepo – tasks & filters](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
 - [Turborepo – config](https://turborepo.dev/docs/reference/configuration)

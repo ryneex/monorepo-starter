@@ -2,13 +2,14 @@
   "name": "@repo/web",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "SKIP_ENV_VALIDATION=true next build",
     "start": "next start",
-    "lint": "pnpm check-types && eslint",
     "check-types": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "oxfmt",
+    "lint": "oxlint --type-aware --type-check"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.13.11",

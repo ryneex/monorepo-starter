@@ -1,11 +1,12 @@
 {
   "name": "monorepo-starter",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "turbo run format",
+    "format": "oxfmt",
+    "lint": "oxlint",
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
@@ -13,8 +14,8 @@
     "turbo": "^2.9.14",
     "typescript": "5.9.2"
   },
-  "packageManager": "pnpm@10.32.1",
   "engines": {
     "node": ">=22"
-  }
+  },
+  "packageManager": "pnpm@10.32.1"
 }

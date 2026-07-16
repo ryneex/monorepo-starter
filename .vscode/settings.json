@@ -1,3 +1,4 @@
 {
-  "tailwindCSS.experimental.classRegex": ["tw`([^`]*)`", "tw\\(([^)]*)\\)"]
+  "tailwindCSS.experimental.classRegex": ["tw`([^`]*)`", "tw\\(([^)]*)\\)"],
+  "editor.defaultFormatter": "oxc.oxc-vscode"
 }
