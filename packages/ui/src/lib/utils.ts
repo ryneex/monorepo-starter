@@ -1,6 +1,6 @@
 import { cn, CnOptions } from "tailwind-variants"
 
-export { cn } from "tailwind-variants"
+export { cn, tv, type TVVariants } from "tailwind-variants"
 
 /**
  * Helper function to provide type safety for tailwind class names
