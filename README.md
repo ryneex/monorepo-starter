@@ -5,7 +5,7 @@ Personal **pnpm + Turborepo** layout I reuse when spinning up new projects. Not 
 ## Requirements
 
 - **Node** ≥ 22
-- **pnpm** 10.32.1 (`packageManager` in root `package.json`)
+- **pnpm** 11.15.0 (`packageManager` in root `package.json`)
 
 ## Setup
 
@@ -22,7 +22,11 @@ pnpm install
 | `@repo/config`    | Oxlint + Oxfmt presets ([details](packages/config/README.md)) |
 | `@repo/ts-config` | Shared `tsconfig` bases                                       |
 
-TypeScript everywhere; lint/format via shared Oxlint/Oxfmt presets (root configs + nested package configs).
+**TypeScript 7** is installed at the workspace root and used by package `check-types` scripts. Lint/format use shared Oxlint/Oxfmt presets (root configs + nested package configs).
+
+### Next.js + TypeScript 7
+
+`apps/web` pins a Next.js 16.3 canary and enables `experimental.useTypeScriptCli` in `next.config.ts`. That flag makes `next build` run the project-local `tsc` CLI, which is required while TypeScript 7 has no JavaScript compiler API for Next’s default checker. Drop back to a stable Next release once it includes this support, or keep the canary + flag while on TS 7.
 
 ## Commands
 
@@ -39,8 +43,8 @@ From the repo root:
 Target one package:
 
 ```sh
-pnpm exec turbo dev --filter=web
-pnpm exec turbo build --filter=web
+pnpm exec turbo dev --filter=@repo/web
+pnpm exec turbo build --filter=@repo/web
 ```
 
 ## New project from this starter
@@ -63,3 +67,4 @@ pnpm exec turbo link
 
 - [Turborepo – tasks & filters](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
 - [Turborepo – config](https://turborepo.dev/docs/reference/configuration)
+- [TypeScript 7 announcement](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/)

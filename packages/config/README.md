@@ -10,7 +10,7 @@ pnpm add -D @repo/config
 
 (`workspace:*` in this repo.)
 
-Oxlint/Oxfmt are declared here and hoisted via root `.npmrc` (`public-hoist-pattern[]=*oxlint*` / `*oxfmt*`). Apps and packages run `oxlint` / `oxfmt` without re-declaring those deps. Type-aware linting also needs `oxlint-tsgolint` (already a dependency of this package).
+Oxlint/Oxfmt are declared here and hoisted via `publicHoistPattern` in root `pnpm-workspace.yaml` (`*oxlint*` / `*oxfmt*`). Apps and packages run `oxlint` / `oxfmt` without re-declaring those deps. Type-aware linting also needs `oxlint-tsgolint` (already a dependency of this package).
 
 ## How this repo wires lint/format
 
