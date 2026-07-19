@@ -23,7 +23,6 @@
     "@repo/ui": "workspace:*",
     "@tailwindcss/postcss": "^4",
     "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "typescript": "^5"
+    "@types/react-dom": "^19"
   }
 }
