@@ -12,6 +12,7 @@
     "lint": "oxlint --type-aware --type-check"
   },
   "dependencies": {
+    "@repo/ui": "workspace:*",
     "@t3-oss/env-nextjs": "^0.13.11",
     "next": "16.3.0-canary.89",
     "react": "19.2.7",
@@ -20,7 +21,6 @@
   "devDependencies": {
     "@repo/config": "workspace:*",
     "@repo/ts-config": "workspace:*",
-    "@repo/ui": "workspace:*",
     "@tailwindcss/postcss": "^4",
     "@types/react": "^19",
     "@types/react-dom": "^19"
